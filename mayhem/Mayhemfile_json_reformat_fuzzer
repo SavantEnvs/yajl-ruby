@@ -1,0 +1,11 @@
+project: savantenvs/yajl-ruby
+target: json-reformat-fuzzer
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/json-reformat-fuzzer/testsuite
+
+cmds:
+  - cmd: /mayhem/tmp/mayhem/json_reformat_fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/json-reformat-fuzzer/json-reformat-fuzzer.dict

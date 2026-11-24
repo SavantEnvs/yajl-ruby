@@ -1,0 +1,10 @@
+project: savantenvs/yajl-ruby
+target: json-gen-fuzzer
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/json-gen-fuzzer/testsuite
+
+cmds:
+  - cmd: /mayhem/tmp/mayhem/json_gen_fuzzer
+    libfuzzer: true

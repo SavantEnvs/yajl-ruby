@@ -1,0 +1,11 @@
+project: savantenvs/yajl-ruby
+target: projector-fuzzer
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/projector-fuzzer/testsuite
+
+cmds:
+  - cmd: /mayhem/tmp/mayhem/projector_fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/projector-fuzzer/projector-fuzzer.dict
